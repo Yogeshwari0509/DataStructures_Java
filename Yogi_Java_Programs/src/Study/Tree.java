@@ -29,9 +29,7 @@ this.right=null;
 
 //Main class
 
-public class BinaryTree
-
-{
+public class BinaryTree{
 
 TreeNode root;
 
