@@ -1,4 +1,5 @@
 package Study;
+
 public class Queue1 {
     private static final int MAX_SIZE = 100;
     private int[] queueArray = new int[MAX_SIZE];
@@ -16,7 +17,8 @@ public class Queue1 {
             System.out.println("Queue overflow, cannot enqueue");
         }
     }
-public int dequeue() {
+
+    public int dequeue() {
         if (size > 0) {
             int dequeuedValue = queueArray[front];
             front = (front + 1) % MAX_SIZE;
@@ -28,11 +30,14 @@ public int dequeue() {
             return -1;
         }
     }
+
     public int peek() {
         if (size > 0) {
             int peekedValue = queueArray[front];
-
-System.out.println("Queue is empty, cannot peek");
+            System.out.println("Peeked: " + peekedValue);
+            return peekedValue;
+        } else {
+            System.out.println("Queue is empty, cannot peek");
             return -1;
         }
     }
@@ -50,12 +55,5 @@ System.out.println("Queue is empty, cannot peek");
         queue.dequeue();
         queue.peek();
         queue.dequeue();
-} }
-public class Queue1 {
-
-	public static void main(String[] args) {
-		
-
-	}
-
+    }
 }
